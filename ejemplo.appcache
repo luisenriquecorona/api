@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# v1 - 2017-09-13
+
+# Usar desde la red si está disponible
+NETWORK:
+https://github.com/luisenriquecorona/api/blob/master/tablajavascript.html
+
+# Contenido de fallback
+FALLBACK:
+tablajavascript.html
