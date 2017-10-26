@@ -1,0 +1,14 @@
+//nombreObjeto.nombrePropiedad
+// vamos a crear el objeto miAuto y darle propiedades denominadas marca, modelo, y año así:
+
+var miAuto = new Object();
+miAuto.marca = "Ford";
+miAuto.modelo = "Mustang";
+miAuto.año = 1969;
+
+//Así, por ejemplo, se puede acceder a las propiedades del objeto miAuto de la siguiente manera:
+
+miAuto["marca"] = "Ford";
+miAuto["modelo"] = "Mustang";
+miAuto["año"] = 1969;
+
