@@ -1,6 +1,0 @@
-miCadena="brie, pepper jack, cheddar"
-miCadenaMayusculas="Brie, Pepper Jack, Cheddar"
-document.writeln('miCadena.indexOf("cheddar") is ' +
-   miCadena.indexOf("cheddar"))
-document.writeln('<P>miCadenaMayusculas.indexOf("cheddar") is ' +
-   miCadenaMayusculas.indexOf("cheddar"))
