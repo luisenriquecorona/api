@@ -1,0 +1,43 @@
+//EJEMPLO1
+//Por ejemplo, supongamos que deseas crear un tipo de objeto para los coches. 
+//Quieres que este tipo de objeto se llame auto, y deseas que tenga propiedades de marca, modelo y el año. 
+//Para ello, podrías escribir la siguiente función:
+function Auto(marca, modelo, annio) {
+  this.marca = marca;
+  this.modelo = modelo;
+  this.annio = annio;
+}
+
+//Ahora puedes crear un objeto llamado miAuto de la siguiente manera:
+var miAuto = new Auto("Eagle", "Talon TSi", 1993);
+
+//Puedes crear cualquier número de objetos Auto con las llamadas a new. Por ejemplo,
+var kenscar = new Auto("Nissan", "300ZX", 1992);
+var vpgscar = new Auto("Mazda", "Miata", 1990);
+
+
+//EJEMPLO2
+//Entonces, puedes volver a escribir la definición de automóvil para incluir 
+//una propiedad propietario que tomará el objeto persona, de la siguiente manera:
+function Auto(marca, modelo, annio, propietario) {
+  this.marca = marca;
+  this.modelo = modelo;
+  this.annio = annio;
+  this.propietario = propietario;
+  this.mostrarAutos = mostrarAutos;
+}
+
+//Para crear instancias de los nuevos objetos, a continuación, utiliza lo siguiente:
+var auto1 = new Auto("Eagle", "Talon TSi", 1993);
+var auto2 = new Auto("Nissan", "300ZX", 1992);
+
+//Por ejemplo, se podría definir una función que formatée y muestre las propiedades de los objetos de 
+//automóviles previamente definidos; por ejemplo,
+function mostrarAutos() {
+  var resultado = "Un bonito " + this.marca + " " + this.modelo
+    + " " + this.annio;
+  imprimir_con_estilo(resultado);
+}
+
+//PRINT
+this.mostrarAutos = mostrarAutos;

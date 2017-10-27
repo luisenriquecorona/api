@@ -1,0 +1,6 @@
+//ejemplo2
+var nombres = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
+document.write(nombres + "<br>" + "<br>");
+var expresionRegular = /\s*;\s*/;
+var listaNombres = nombres.split(expresionRegular);
+document.write(listaNombres);
