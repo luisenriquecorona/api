@@ -1,9 +1,0 @@
-var cualquierCadena="Brave new world"
-document.write("<P>The index of the first w from the beginning is " +
-   cualquierCadena.indexOf("w"))         // Muestra 8
-document.write("<P>The index of the first w from the beginning is " +
-   cualquierCadena.lastIndexOf("w"))    // Muestra 10
-document.write("<P>The index of 'new' from the beginning is " +
-   cualquierCadena.indexOf("new"))      // Muestra 6
-document.write("<P>The index of 'new' from the end is " +
-   cualquierCadena.lastIndexOf("new"))  // Muestra 6
