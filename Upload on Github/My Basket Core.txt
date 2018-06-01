@@ -1,0 +1,34 @@
+// Global module
+var myModule = (function () {
+ 
+  // Module object
+  var module = {},
+    privateVariable = "Hello World";
+ 
+  function privateMethod() {
+    // ...
+  }
+ 
+  module.publicProperty = "Foobar";
+  module.publicMethod = function () {
+    console.log( privateVariable );
+  };
+ 
+  return module;
+ 
+})();
+
+//basket.core store
+var store = window.store || {};
+ 
+if ( !store["basket"] ) {
+  store.basket = {};
+}
+ 
+if ( !store.basket["core"] ) {
+  store.basket.core = {};
+}
+ 
+store.basket.core = {
+  // ...rest of our logic
+};
