@@ -1,0 +1,88 @@
+<html> 
+<head>
+  <title>Play/Pause button for HTML5 video using JavaScript</title>
+
+<style type="text/css">
+<!--
+body {
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+html {
+overflow: hidden;
+}
+-->
+</style>
+
+<style>
+
+.container {
+  position:relative;
+  display:inline-block;
+  font-size:0;
+  }
+
+ .controls {
+
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(255,255,255,0.3);
+  padding:15px;
+  box-sizing:content-box;
+  z-index:10000;
+  }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+</style>
+
+</head>
+<body> 
+
+<div style="text-align:center"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id=video1 class=container>
+  <video width=240 muted src="20210707-131110_eL3X1k4i.mp4"></video>
+  <div class=controls style="display:none">
+    <button>Play</button>
+  </div>
+</div>
+</div> 
+
+
+<script>
+var $container = $("#video1");
+var $video = $container.children("video"), video = $video[0]
+var $controls = $container.children(".controls");
+var $play = $controls.children("button");
+
+// control visibility
+$container.on("mouseover mouseout", function(e) {
+  $controls.css("display", e.type === "mouseout" && video.paused ? "none" : "block");
+});
+
+// play or pause
+$play.on("click", toggle);
+$video.on("click", toggle);
+
+function toggle() {
+  video[video.paused ? "play" : "pause"]();
+}
+
+// todo: cover more events (seeked, error etc.)
+$video.on("play pause ended", updateUI);
+
+// update control UI elements (todo: update time/progress etc.)
+function updateUI() {
+  $play.text(video.paused ? "Play" : "Pause")
+}
+
+</script>
+
+</body> 
+</html>
